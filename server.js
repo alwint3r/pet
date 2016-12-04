@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const swig = require('swig');
 const config = require('./config');
+const bodyParser = require('body-parser');
 
 // db & swig config
 
@@ -9,6 +10,8 @@ require('./db');
 swig.setDefaults(config.swig);
 app.engine('html', swig.renderFile);
 app.set('view engine', 'html');
+
+app.use(bodyParser.json());
 
 // routes config
 
