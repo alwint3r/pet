@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const config = require('./config');
 
-mongoose.connect(config.db);
+mongoose.connect(config.db, config.mongoose);
 
 mongoose.connection.on('connected', () => {
   console.log('Mongoose connected to ' + config.db);

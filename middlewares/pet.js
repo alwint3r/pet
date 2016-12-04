@@ -1,11 +1,11 @@
 
-// const mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
-// require('../models/pet');
+require('../models/pet');
 
-// const Pet = mongoose.model('Pet');
+const Pet = mongoose.model('Pet');
 
-const Pet = require('../models/pet');
+// const Pet = require('../models/pet');
 
 module.exports = {
   list(req, res, next) {
